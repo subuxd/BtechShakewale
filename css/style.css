@@ -1,0 +1,238 @@
+/*CSS Reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+   scroll-behavior: smooth;     /*by giving these attribute when we click any item in nav bar it will smoothly get to that part*/
+}
+
+/*CSS Variables*/
+:root{
+    --navbar-height: 59px;
+}
+
+/*Navigation Bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;       /*to keep the navigation bar sticky we've to write position as well as give top so that it sticks from the top*/
+    top: 0px;
+}
+
+#navbar::before{        /*taught in tut19 of CSS*/
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 86%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation Bar: Logo and Image  */
+#logo{
+    margin: 13px 27px;
+}
+
+#logo img{
+    height: 43px;
+    margin: -1px -7px;
+}
+
+/*Navigation Bar: List Styling*/
+#navbar ul{
+    display: flex;
+    font-family: 'Libre Bodoni', serif;
+}
+
+
+#navbar ul li{
+    list-style: none;       /*It removes all the bindu from li items*/
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+
+/* Home Section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 200px;
+    height: 683px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url("../bg1.jpg") no-repeat center center/cover;   /*we are in css folder so ../ to come out of it and then pasting the img location, and also "no-repeat center center/cover" is written so that the image comes in center*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1{
+    color: black;
+    text-align: left;
+}
+
+#home p{
+    color: black;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+/* Services Section  */
+#services{
+    margin: 35px;
+    display: flex;  /*we declared it as flex b/c inside it there are 3 items*/
+}
+
+#services .box{
+    border: 2px solid red;
+    padding: 15px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: rgb(136, 200, 222);
+}
+
+#services .box img{
+    height: 220px;
+    margin: auto;       /*using both margin & display at the same time to center the items in the box*/
+    display: block;
+}
+
+#services .box p{
+    text-align: center;     /*to center a paragraph*/
+    font-family: 'Libre Bodoni', serif;
+}
+
+/*Clients Section*/
+#client-section{
+    /* height: 460px; */
+    position: relative;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg2.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 94%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;  /*to put all the client images in a row*/
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 61px;
+}
+
+#clients img{
+    height: 240px;
+}
+
+/* Contact Section  */
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 35%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Libre Bodoni', serif;
+}
+
+footer{
+    background: black;
+    color: whitesmoke;
+    padding: 9px 20px;
+}
+
+/* Utility Classes  */
+.h-primary{
+    font-size: 6.5rem;
+    padding: 12px;
+}
+
+.h-primarycenter{
+    font-size: 40px;
+    padding: 40px;
+    margin: auto;       /*to center any text with heading we have to do margin:auto & give it width*/
+    width: 221px;
+    height: 0px
+}
+
+.h-secondary{
+    font-size: 25px;
+    padding: 12px;
+    margin: auto;
+    width: 178px;
+    font-family: 'Merriweather', serif;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid whitesmoke;
+    background-color: black;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
